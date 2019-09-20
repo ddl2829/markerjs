@@ -205,6 +205,8 @@ export class MarkerArea {
 
     private initMarkerCanvas = () => {
         this.markerImageHolder = document.createElement("div");
+
+	this.markerImageHolder.id = "markerjs-canvas";
         // fix for Edge's touch behavior
         this.markerImageHolder.style.setProperty("touch-action", "none");
         this.markerImageHolder.style.setProperty("-ms-touch-action", "none");
