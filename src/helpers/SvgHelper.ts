@@ -1,5 +1,4 @@
 export class SvgHelper {
-
     public static createRect = (
         width: number | string,
         height: number | string,

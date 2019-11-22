@@ -8,19 +8,19 @@ export class CircleMarker extends RectangularMarkerBase {
         return marker;
     }
 
-    private markerRect: SVGRectElement;
+    private markerCircle: SVGCircleElement;
 
     protected setup() {
         super.setup();
-        this.markerRect = SvgHelper.createRect(this.width, this.height);
-        this.addToRenderVisual(this.markerRect);
+        this.markerCircle = SvgHelper.createCircle(this.width / 2);
+        this.addToRenderVisual(this.markerCircle);
         SvgHelper.setAttributes(this.visual, [["class", "circle-marker"]]);
     }
 
     protected resize(x: number, y: number) {
         super.resize(x, y);
-        this.markerRect.setAttribute("width", this.width.toString());
-        this.markerRect.setAttribute("height", this.height.toString());
+        this.markerCircle.setAttribute("rx", (this.width / 2).toString());
+        this.markerCircle.setAttribute("ry", (this.height / 2).toString());
     }
 
 }
