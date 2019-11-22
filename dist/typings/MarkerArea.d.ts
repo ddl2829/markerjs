@@ -1,4 +1,4 @@
-import { MarkerBase } from "./markers/MarkerBase";
+import { MarkerBase } from './markers/MarkerBase';
 export declare class MarkerArea {
     private target;
     private markerImage;
