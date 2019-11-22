@@ -49,6 +49,24 @@ export class SvgHelper {
         return polygon;
     }
 
+    public static createEllipse = (
+        rx: number,
+        ry: number,
+        attributes?: Array<[string, string]>,
+    ): SVGEllipseElement => {
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+
+        circle.setAttribute("cx", rx.toString());
+        circle.setAttribute("cy", ry.toString());
+        circle.setAttribute("rx", rx.toString());
+        circle.setAttribute("ry", ry.toString());
+        if (attributes) {
+            SvgHelper.setAttributes(circle, attributes);
+        }
+
+        return circle;
+    }
+
     public static createCircle = (
         radius: number,
         attributes?: Array<[string, string]>,

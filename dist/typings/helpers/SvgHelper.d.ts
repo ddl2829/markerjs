@@ -2,6 +2,7 @@ export declare class SvgHelper {
     static createRect: (width: string | number, height: string | number, attributes?: [string, string][]) => SVGRectElement;
     static createLine: (x1: string | number, y1: string | number, x2: string | number, y2: string | number, attributes?: [string, string][]) => SVGLineElement;
     static createPolygon: (points: string, attributes?: [string, string][]) => SVGPolygonElement;
+    static createEllipse: (rx: number, ry: number, attributes?: [string, string][]) => SVGEllipseElement;
     static createCircle: (radius: number, attributes?: [string, string][]) => SVGCircleElement;
     static createGroup: (attributes?: [string, string][]) => SVGGElement;
     static setAttributes: (el: SVGElement, attributes: [string, string][]) => void;
